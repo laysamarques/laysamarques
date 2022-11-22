@@ -1,0 +1,614 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+
+            html{
+                scroll-behavior: smooth;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            body{
+                background: #0e0f10;
+                color: white;
+                margin: 0px;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .table-principal{
+                Width: 100%;
+                height: 100vh;
+                border-collapse: collapse;
+            }
+            .cabecalho{
+                background: darkslategrey;
+                color: white;
+                height: 200px;
+            }
+        
+            .menu{
+                padding: 20px;
+                width: 10%;
+                background: #1d1d22;
+                color: white;
+                vertical-align: top;
+                text-align: center;
+                position: fixed;
+                height: 100%;
+            }
+        
+            .corpo{
+                padding-left: 20%;
+                padding-right: 10%;
+                vertical-align: top;
+            } 
+
+            .title{
+                text-align: center;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .card-box{
+                display: flex;
+
+            }
+
+            .card-box-img img{
+                height: 200px;
+                border-radius: 50%;
+            }
+
+            .card-box-body{
+                margin-left: 20px;
+            }
+
+            .local {
+                color:#F49E4C;
+                font-size: 12px;
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+
+            .menu p{
+                margin-bottom: 30px;
+                
+            }
+
+            .menu a{
+                color:white;
+                text-decoration: none;
+            }
+
+            .menu a i{
+                font-size:30px ;
+            }
+
+            .menu a:hover{
+                color: #F49E4C
+            }
+
+            .menu .logo{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 2px solid #F49E4C;
+                margin-bottom: 50px;
+            }
+
+            .service-container {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .service-container .service-item {
+                width:  calc(33.33% - 32px); 
+                margin: 16px;
+             }
+
+            .service-container .service-item .service-item-card {
+                background-color: #070708;
+                border: 1px solid black;
+                border-radius: 16px;
+                height: 300px;
+                width: 300px;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .service-container .service-item .service-item-card:hover {
+                border: 1px solid #F49E4C;
+            }
+
+            .service-container .service-item .service-item-card .service-item-card-icon {
+                background-color: #0c0f10;
+                height: 80px;
+                border: 1px solid black;
+                width: 80px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .service-container .service-item .service-item-card .service-item-card-icon:hover {
+                border: 1px solid #F49E4C;
+            }
+
+            .service-container .service-item .service-item-card .service-item-card-icon i {
+                font-size: 30px;
+            }
+
+            .service-container .service-item .service-item-card .service-item-card-title  {
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+
+            .service-container .service-item .service-item-card .service-item-card-description {
+                text-align: center;
+            }
+
+            .flexbox {
+                display: flex;
+                gap: 30px;
+            }
+
+            .flexbox-item {
+                width: 50%;
+            }
+
+            .card {
+                background: #070708;
+                padding: 30px;
+                border-radius: 8px;
+            }
+
+            .timeline-item {
+                padding-bottom: 30px;
+                border-left: 1px solid  #F49E4C;
+                padding-left: 32px;
+                position: relative;
+            }
+
+            .timeline-item-period {
+                font-size: 12px;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                color: #F49E4C;
+            }
+
+            .timeline-item-marker{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 8px;
+                left: -8px;
+
+            }
+
+            .timeline-item-marker-circle {
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                background: #F49E4C
+            }
+
+            .timeline-item-marker-line {
+                height: 1px;
+                width: 15px;
+                background: #F49E4C;
+            }
+
+            #AboutMeSection, #ExperienceSection, #ContactSection {
+                scroll-margin-top: 50px;
+            }
+            
+            .progress-bar {
+                background: #0e0f10;
+                height: 8px;
+                border-radius: 8px;
+                position: relative;
+                margin-bottom: 60px;
+            }
+
+            .progress-bar-done{
+                background: #F49E4C;
+                height: 100%;
+                border-radius: 8%;
+                position: relative;
+            }
+            
+            .progress-bar-title {
+                position: absolute;
+                top: -30px;
+            }
+
+            .progress-bar-done-text {
+                position: absolute;
+                top: -30px;
+                right: 0px;
+            }
+
+            .padding-top-60 {
+                padding-top: 60px;
+            }
+
+            .progress-bar-sone-check {
+                height: 20px;
+                width: 20px;
+                border: 4px solid #F49E4C;
+                border-radius: 50%;
+                position: absolute;
+                right: 0px;
+                top: -6px;
+                background: #F49E4C;
+            }
+
+            .contact-item {
+                text-align: center;
+                gap: 20px;
+                width: 30%;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-item-icon {
+                font-size: 40px;
+                border: 1px solid#F49E4C;
+                height: 80px;
+                width: 80px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .contact-item-value a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .contact-item-value a:hover {
+                text-decoration: underline;
+            }
+
+            h2.film-animation {
+                position: relative;
+                color:#252839;
+                -webkit-text-stroke: 0.3vw;
+                font-size: 60px;;
+            }
+
+            h2.film-animation::before {
+                content: attr(data-text);
+                position: absolute;
+                top:0;
+                left:0;
+                width: 0;
+                height: 100%;
+                color:#F49E4C;
+                -webkit-text-stroke: 0vw;
+                overflow: hidden;
+                animation: animate 6s linear forwards;
+            }
+
+            @keyframes animate {
+
+
+                0% ,10% {
+                    width: 0;
+                }
+                70%,90%, 100% {
+                    width: 100%;
+                }
+            }
+
+
+
+        </style>
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,500&display=swap" rel="stylesheet">
+
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <table class="table-princial"> 
+            <tr>
+                <td class="menu"> 
+                    <div class="logo">
+                        <h2 data-text="CV" class="film-animation">CV</h2>
+                    </div>
+                    <p>
+                        <a href="#AboutMeSection">
+                            <i class="fa-solid fa-user-large"></i>
+                        </a>
+                    </p>
+                    <p>
+                        <a href="#ExperienceSection">
+                            <i class="fa-solid fa-address-book"></i>
+                        </a>
+                    </p>
+                    <p></p>
+                        <a href="#ContactSection">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </p>
+                </td>
+            </tr>
+                <td class="corpo">
+                    <div id="AboutMeSection" style= "padding-bottom: 30px; min-height:1000px;">
+                        <h1 class="title">Sobre mim</h1> 
+                        <div class="card-box card">
+                            <div class="card-box-img">
+                                <img src="./img/img1.jpg">
+                            </div>
+                            <div class="card-box-body">
+                            <h3>Laysa Marques</h3>
+                            <p class="local"><i class="fa-solid fa-map-location-dot"></i> Brasília-DF</p>
+                            <p>Olá! Me chamo Laysa, no momento estou cursando Design Gráfico.</p>
+                            <p>Meu objetivo é colocar em prática os conhecimentos adquiridos na vida acâdemica,  experiências profissional
+                            e cursos profissionalizantes. Visando 
+                            sempre agregar novos conhecimentos para a composição de um profissional completo, além 
+                            de adaptar no que for necessário e útil, para os fins da empresa.
+                            </p>
+                            </div>
+                        </div>
+                            <h2 class="title"> Áreas de Atuação</h2>
+                        <div class="service-container">
+                            <div class="service-item">
+                                <div class="service-item-card">
+                                    <div class="service-item-card-icon">
+                                        <i class="fa-solid fa-desktop"></i>
+                                    </div>
+                                    <div class="service-item-card-title">
+                                        <h3>Desenvolvedor Front-End</h3>
+                                    </div>
+                                    <div class="service-item-card-descrition">
+                                        <span>Html, Javascript (Angular, JQuery, React), Css...</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-item-card">
+                                    <div class="service-item-card-icon">
+                                        <i class="fa-solid fa-chart-simple"></i>
+                                    </div>
+                                    <div class="service-item-card-title">
+                                        <h3>APM</h3>
+                                    </div>
+                                    <div class="service-item-card-descrition">
+                                        <span>Monitoramento de desempenho do aplicativo.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-item-card">
+                                    <div class="service-item-card-icon">
+                                        <i class="fa-solid fa-tower-broadcast"></i>
+                                    </div>
+                                    <div class="service-item-card-title">
+                                        <h3>Monitoramento de Redes</h3>
+                                    </div>
+                                    <div class="service-item-card-descrition">
+                                        <span>Configurações de Antenas IPS, SSH, 
+                                            Atendimento de Chamados, Suporte ao Usuário</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-item-card">
+                                    <div class="service-item-card-icon">
+                                        <i class="fa-solid fa-pen-nib"></i>
+                                    </div>
+                                    <div class="service-item-card-title">
+                                        <h3>Edição Gráfica</h3>
+                                    </div>
+                                    <div class="service-item-card-descrition">
+                                        <span>Photoshop,Illustrator, Silhouette Studio...</span>
+                                    </div>
+                                </div>
+                            </div>
+                    <div id="ExperienceSection" style= "padding-bottom: 30px; min-height:1000px;" >
+                        <h1 class="title">Resumo</h1>
+                        <div class="flexbox" >
+                        <div class="flexbox-item">
+                        <H2 class="title">Experiências Profissional</H2>
+                        <div class="card">
+                            <div class="timeline-item">
+                                <div class="timeline-item-marker">
+                                    <div class="timeline-item-marker-circle">
+
+                                    </div>
+                                    <div class="timeline-item-marker-line">
+
+                                    </div>
+                                </div>   
+                            <h4>Desenvolvedora Full Stack</h4>
+                            <p class="timeline-item-period">
+                                <i class="fa-regular fa-calendar-days"></i> 2022 | Freelancer</p>
+                             Desenvolvimento Front-End em HTML e CSS.
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-item-marker">
+                                    <div class="timeline-item-marker-circle">
+
+                                    </div>
+                                    <div class="timeline-item-marker-line">
+
+                                    </div>
+                                </div>   
+                            <h4>NOC | APM</h4>
+                            <p class="timeline-item-period">
+                                <i class="fa-regular fa-calendar-days"></i> 2016 - Agosto/2017 | Xys Interatividade</p>
+                             Gestão de Incidentes, Configuração de métricas, monitoramento de aplicações e 
+                            agentes, analise de performance e erros de PureParths, Verificação de servidores, Relatório de 
+                            incidentes semanal, criação de fluxo de trabalho.
+                            </div>
+                             <div class="timeline-item">
+                                <div class="timeline-item-marker">
+                                    <div class="timeline-item-marker-circle">
+
+                                    </div>
+                                    <div class="timeline-item-marker-line">
+
+                                    </div>
+                                </div>   
+                            <h4>Analista de Monitoramento | Redes</h4>
+                            <p class="timeline-item-period">
+                                <i class="fa-regular fa-calendar-days"></i> 2016 - Agosto/2016 | Junto Telecom</p>
+                                Monitoramento de Redes, Acesso Remoto, VPN, Configurações de Antenas IPS, SSH, 
+                                Atendimento de Chamados, Suporte ao Usuário
+                            </div>
+                        </div>
+                        </div>
+                        <div class="flexbox-item">
+                            <H2 class="title">Educação</H2>
+                            <div class="card">
+                                <div class="timeline-item">
+                                    <div class="timeline-item-marker">
+                                        <div class="timeline-item-marker-circle">
+
+                                        </div>
+                                        <div class="timeline-item-marker-line">
+
+                                        </div>
+                                    </div>   
+                                <h4>Cursando</h4>
+                                <p class="timeline-item-period">
+                                    <i class="fa-regular fa-calendar-days"></i> 2020 - 2023 | Design Gráfico</p>
+                                </div>
+                            </div>
+                            <H2 class="title">Certificações</H2>
+                            <div class="card">
+                                <div class="timeline-item">
+                                    <div class="timeline-item-marker">
+                                        <div class="timeline-item-marker-circle">
+
+                                        </div>
+                                        <div class="timeline-item-marker-line">
+
+                                        </div>
+                                    </div>   
+                                <h4>ITIL Foundation</h4>
+                                <p class="timeline-item-period">
+                                    <i class="fa-regular fa-calendar-days"></i> 2017 | Instituição: Exin</p>
+                                </div>
+                            </div><div class="card">
+                                <div class="timeline-item">
+                                    <div class="timeline-item-marker">
+                                        <div class="timeline-item-marker-circle">
+
+                                        </div>
+                                        <div class="timeline-item-marker-line">
+
+                                        </div>
+                                    </div>   
+                                <h4>Application Performance Monitoring Industry</h4>
+                                <p class="timeline-item-period">
+                                    <i class="fa-regular fa-calendar-days"></i> 2017 | Instituição: Dynatrace/ APM University</p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                            <H2 class="title">Tecnologias</H2>
+                                <div class="card padding-top-60">
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-title">
+                                            HTML
+                                        </div>
+                                        <div class="progress-bar-done" style="width:98%">
+                                            <div class="progress-bar-sone-check">
+                                            </DIV>
+                                            <div class="progress-bar-done-text">
+                                            98%
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-title">
+                                            JAVA
+                                        </div>
+                                        <div class="progress-bar-done" style="width:75%">
+                                            <div class="progress-bar-sone-check">
+                                            </DIV>
+                                            <div class="progress-bar-done-text">
+                                            75%
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-bar-title">
+                                            PHP
+                                        </div>
+                                        <div class="progress-bar-done" style="width:50%">
+                                            <div class="progress-bar-sone-check">
+                                            </DIV>
+                                            <div class="progress-bar-done-text">
+                                            50%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+
+                    </div>
+                           
+                    <div id="ContactSection" style="height:1000px; width: 100%;">
+                            <H1 class="title">Contato</H1>
+                                <div class="card flexbox">
+                                    <div class="contact-item flexbox">
+                                        <div class="contact-item-icon">
+                                            <i class="fa-solid fa-paper-plane"></i>
+                                        </div>
+                                        <div class="contact-item-value">
+                                            <a href="mailto: laysa.marques10@gmail.com">laysa.marques10@gmail.com</a>
+                                        </div>
+                                        <div class="contact-item-descripition">
+                                            Email
+                                        </div>
+                                    </div>
+                                    <div class="contact-item flexbox">
+                                        <div class="contact-item-icon">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </div>
+                                        <div class="contact-item-value">
+                                            <a target="_blank" href="https://www.instagram.com/laysa.smarques/"> @laysa.smarques</a>
+                                        </div>
+                                        <div class="contact-item-descripition">
+                                            Instagram
+                                        </div>
+                                    </div>
+                                    <div class="contact-item flexbox">
+                                        <div class="contact-item-icon">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                        <div class="contact-item-value">
+                                            <a target="_blank" href="https://wa.me/+5561984260890">(61) 98426-0890</a>
+                                        </div>
+                                        <div class="contact-item-descripition">
+                                            Telefone
+                                        </div>
+                                    </div>
+                                 </div>
+
+                    </div>
+                </td>
+            </tr> 
+        </table>    
+    </body> 
+
+
+</html>

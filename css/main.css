@@ -1,0 +1,380 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #0e0f10;
+    color: white;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10%;
+}
+
+.title{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.flexbox {
+    display: flex;
+    gap: 30px;
+}
+
+.flexbox-item {
+    width: 50%;
+}
+
+#AboutMeSection, #ExperienceSection, #ContactSection {
+    scroll-margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.padding-top-60 {
+    padding-top: 60px !important;
+}
+
+/*Menu Section Init*/
+.menu {
+    background-color: red;
+    width: 10%;
+    height: 100%;
+    padding: 20px;
+    background: #1d1d22;
+    color: white;
+    vertical-align: top;
+    text-align: center;
+    position: fixed;
+}
+
+.menu p{
+    margin-bottom: 30px;
+    
+}
+
+.menu a{
+    color:white;
+    text-decoration: none;
+}
+
+.menu a i{
+    font-size:30px ;
+}
+
+.menu a:hover{
+    color: #F49E4C
+}
+
+.menu .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #F49E4C;
+    margin-bottom: 50px;
+}
+/*Menu Section Exit*/
+
+/*Fill Animation Section Init*/
+h2.film-animation {
+    position: relative;
+    color:#252839;
+    -webkit-text-stroke: 0.3vw;
+    font-size: 60px;;
+}
+
+h2.film-animation::before {
+    content: attr(data-text);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 0;
+    height: 100%;
+    color:#F49E4C;
+    -webkit-text-stroke: 0vw;
+    overflow: hidden;
+    animation: animate 6s linear forwards;
+}
+
+@keyframes animate {
+
+
+    0% ,10% {
+        width: 0;
+    }
+    70%,90%, 100% {
+        width: 100%;
+    }
+}
+/*Fill Animation Section End*/
+
+/*Card Box Section Init*/
+.card {
+    background: #070708;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.card-box{
+    display: flex;
+
+}
+
+.local {
+    color:#F49E4C;
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.card-box-img img{
+    height: 200px;
+    border-radius: 50%;
+}
+
+.card-box-body{
+    margin-left: 20px;
+}
+/*Card Box Section End*/
+
+/*Service Section Int*/
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service-container .service-item {
+    width:  calc(33.33% - 32px); 
+    margin: 16px;
+ }
+
+.service-container .service-item .service-item-card {
+    border: 1px solid black;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-container .service-item .service-item-card:hover {
+    border: 1px solid #F49E4C;
+}
+
+.service-container .service-item .service-item-card .service-item-card-icon {
+    background-color: #0c0f10;
+    height: 80px;
+    border: 1px solid black;
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-container .service-item .service-item-card .service-item-card-icon:hover {
+    border: 1px solid #F49E4C;
+}
+
+.service-container .service-item .service-item-card .service-item-card-icon i {
+    font-size: 30px;
+}
+
+.service-container .service-item .service-item-card .service-item-card-title  {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.service-container .service-item .service-item-card .service-item-card-description {
+    text-align: center;
+}
+/*Service Section End*/
+
+/*TimeLine Sextion Init*/
+.timeline-item {
+    padding-bottom: 30px;
+    border-left: 1px solid  #F49E4C;
+    padding-left: 32px;
+    position: relative;
+}
+
+.timeline-item-period {
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: #F49E4C;
+}
+
+.timeline-item-marker{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    left: -8px;
+
+}
+
+.timeline-item-marker-circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #F49E4C
+}
+
+.timeline-item-marker-line {
+    height: 1px;
+    width: 15px;
+    background: #F49E4C;
+}
+/*TimeLine Section End*/
+
+/*ProgessBar Section Init*/
+.progress-bar {
+    background: #0e0f10;
+    height: 8px;
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.progress-bar-done{
+    background: #F49E4C;
+    height: 100%;
+    border-radius: 8%;
+    position: relative;
+}
+
+.progress-bar-title {
+    position: absolute;
+    top: -30px;
+}
+
+.progress-bar-done-text {
+    position: absolute;
+    top: -30px;
+    right: 0px;
+}
+
+.progress-bar-sone-check {
+    height: 20px;
+    width: 20px;
+    border: 4px solid #F49E4C;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    top: -6px;
+    background: #F49E4C;
+}
+/*ProgressBar Section End*/
+
+/*Contact Section Init*/
+.contact-item {
+    text-align: center;
+    gap: 20px;
+    width: 30%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-item-icon {
+    font-size: 40px;
+    border: 1px solid#F49E4C;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contact-item-value a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-item-value a:hover {
+    text-decoration: underline;
+}
+/*Contact Section End*/
+
+@media only screen and (max-width:770px) {
+  
+    .menu {
+        display: none;
+    }
+
+    .content {
+        padding: 0px;
+    }
+  
+    .card-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-box-body {
+        margin-top: 16px;
+    }
+
+    .card-box-body p {
+        margin-top: 8px;
+        line-height: 40px;
+    }
+
+    .service-container .service-item {
+        width: calc(50% - 32px);
+    }
+
+    .service-container .service-item .service-item-card {
+        min-height: 300px
+    }
+
+    .flexbox {
+        flex-direction: column;
+
+    }
+
+    .flexbox-item {
+        width: 100%;
+    }
+
+    #ContactSection .flexbox {
+        align-items: center;
+    }
+
+}
+
+@media only screen and (max-width:600px) {
+
+    .service-container .service-item {
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 16px;
+    }
+
+    .service-container .service-item .service-item-card {
+        justify-content: center;
+    }
+}
