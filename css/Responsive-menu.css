@@ -124,46 +124,7 @@ header label {
         border-top: 1px solid #0e0f10;
     }
 
-    #btn-menu:checked ~ .responsive-menu {
-        margin: 0;
-    }
-
-    .container {
-        margin-top: 57px;
-    }
-}
-    
-@media only screen and (max-width: 320px) {
-    header {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        display: block;
-    }
-
-    header label {
-        display: flex;
-    }
-
-    .responsive-menu {
-        position: fixed;
-        background: #1d1d22;
-        width: 100%;
-        margin-left: -100%;
-        transition: all 0.3s;
-        display: flex;
-        flex-direction: column;
-        top: 56px;
-        z-index: 1;
-    }
-
-    nav a {
-        display: block;
-        border-top: 1px solid #0e0f10;
-    }
-
-    #btn-menu:checked ~ .responsive-menu {
+    #btn-menu:checked .responsive-menu {
         margin: 0;
     }
 
